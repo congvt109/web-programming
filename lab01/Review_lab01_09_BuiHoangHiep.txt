@@ -1,0 +1,8 @@
+Nhận xét cho bạn Bùi Hoàng Hiệp – STT09:
+Làm bài đầy đủ.
+Đúng yêu cầu.
+Đánh giá:
+Nhận xét: Sử dụng thành thạo các thẻ HTML cơ bản được giới thiệu trong bài, viết được các chương trình PHP cơ bản, biên dịch và chạy chương trình PHP.
+Bạn đã tự học thêm về HTML
+Tuy nhiên lab trình bày chưa được cụ thể và rõ ràng
+Điểm: 9.5.

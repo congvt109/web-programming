@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        margin: 10px;
+    }
+</style>
+<body>
+    <h3>About You</h3>
+
+<form action="index.php" method="POST" >
+<div>
+    <label for= "name" >Your name: </label>
+    <input type="text" name="name" >
+</div>
+<div>
+    <span>Gender</span>
+    <input type="radio" id="male" name="gender" value="Male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label>
+</div>
+<div>
+    <label for="university">University</label>
+    <input type="text" id="university" name="university">
+</div>
+<div>
+    <label for= "class" >Your class: </label>
+    <select name="class">
+        <option value = "Việt Nhật 01">Việt Nhật 01</option>
+        <option value = "Việt Nhật 02">Việt Nhật 02</option>
+        <option value = "Việt Nhật 03">Việt Nhật 03</option>
+        <option value = "Việt Nhật 03">Việt Nhật 04</option>
+        <option value = "Việt Nhật 03">Việt Nhật 05</option>
+    </select>
+</div>
+<div>
+    <label for="hobbies"> Your Hobby: </label>
+    <input type="checkbox" id = "hobby1" name = "hobby1" value="Play games">
+    <label for ="hobby1" >Play games</label>
+    <input type="checkbox" id = "hobby2" name = "hobby2" value="Volleyball"> 
+    <label for ="hobby2" >Volleyball</label>
+</div>
+ <br> 
+    <input type="submit" value="Click To Submit">
+</form>
+</body> </html>
