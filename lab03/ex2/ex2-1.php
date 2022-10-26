@@ -1,40 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <?php
-        function fromDateToLetter ($month) {
-            if ($month == 1){
-                return January;
-            }else if ($month == 2){
-                return February;
-            }else if ($month == 3){
-                return March;
-            }else if ($month == 4){
-                return April;
-            }else if ($month == 5){
-                return May;
-            }else if ($month == 6){
-                return June;
-            }else if ($month == 7){
-                return July;
-            }else if ($month == 8){
-                return August;
-            }else if ($month == 9){
-                return September;
-            }else if ($month == 10){
-                return October;
-            }else if ($month == 11){
-                return November;
-            }else if ($month == 12){
-                return December;
+<html>
+    <head>
+        <style>
+            body{
+                margin: 400px;
+                padding: 0;
             }
+            input{
+                margin-top:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="#" method="POST"> 
+            <div>
+                <label for="degree">Type your degree number :</label>
+                <br>
+                <input type="text" name="degree" > 
+            </div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+        <?php
+        if (isset($_POST['degree'])) {
+            $degree = $_POST['degree']; 
+            $radian = deg2rad($degree);
+            echo "<h2> $degree degree is $radian radian</h2>"; 
         }
-    ?>
-</body>
+        ?>
+    </body>
 </html>
