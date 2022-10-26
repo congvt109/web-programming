@@ -81,43 +81,54 @@
         <input type="reset" value="Reset">
     </form>
     <?php 
-        $name = $_POST['name'];
-        $date = $_POST['date'];
-        $month = $_POST['month'];
-        $year = $_POST['year'];
-        $hour = $_POST['hour'];
-        $minute = $_POST['minute'];
-        $second = $_POST['second'];
-        echo"<h2>Hi $name !</h2>";
-        echo"<h2>You have choose to have an appointment at $hour:$minute:$second, $date/$month/$year</h2>";
-        echo"<h2>More information</h2>";
-        if ($hour > 12){
-            $hour = $hour-12;
-            echo"<h2>In 12 hours, the time and date is $hour:$minute:$second PM</h2>";
-        }else{
-            echo"<h2>In 12 hours, the time and date is $hour:$minute:$second AM, $date/$month/$year</h2>";
-        }
-        if ($month == 1 
-            ||$month == 3
-            ||$month == 5 
-            ||$month == 7
-            ||$month == 8
-            ||$month == 10
-            ||$month == 12){
-                echo"<h2>This month has 31 days</h2>";
-        }
-        if ($month == 4
-            ||$month == 6
-            ||$month == 9 
-            ||$month == 11){
-                echo"<h2>This month has 30 days</h2>";
-        }
-        if ($month == 2){
-            if ($year % 4 == 0 || ($year % 100 == 0 && $year % 400 == 0)){
-                echo"<h2>This month has 29 days</h2>";
+        if (isset($_POST['name']) 
+            && isset($_POST["date"])
+            && isset($_POST["month"])
+            && isset($_POST["year"])
+            && isset($_POST["hour"])
+            && isset($_POST["minute"])
+            && isset($_POST["second"])){
+            $name = $_POST['name'];
+            $date = $_POST['date'];
+            $month = $_POST['month'];
+            $year = $_POST['year'];
+            $hour = $_POST['hour'];
+            $minute = $_POST['minute'];
+            $second = $_POST['second'];
+            echo"<h2>Hi $name !</h2>";
+            echo"<h2>You have choose to have an appointment at $hour:$minute:$second, $date/$month/$year</h2>";
+            echo"<h2>More information</h2>";
+            if ($hour > 12){
+                $hour = $hour-12;
+                echo"<h2>In 12 hours, the time and date is $hour:$minute:$second PM</h2>";
             }else{
-                echo"<h2>This month has 28 days</h2>";
+                echo"<h2>In 12 hours, the time and date is $hour:$minute:$second AM, $date/$month/$year</h2>";
             }
+            if ($month == 1 
+                ||$month == 3
+                ||$month == 5 
+                ||$month == 7
+                ||$month == 8
+                ||$month == 10
+                ||$month == 12){
+                    echo"<h2>This month has 31 days</h2>";
+            }
+            if ($month == 4
+                ||$month == 6
+                ||$month == 9 
+                ||$month == 11){
+                    echo"<h2>This month has 30 days</h2>";
+            }
+            if ($month == 2){
+                if ($year % 4 == 0 || ($year % 100 == 0 && $year % 400 == 0)){
+                    echo"<h2>This month has 29 days</h2>";
+                }else{
+                    echo"<h2>This month has 28 days</h2>";
+                }
+            }
+            echo date('d F, Y (l)');
+        }else {
+            echo"<h2>Error input</h2>";
         }
     ?>
     </body>
