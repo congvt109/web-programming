@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<body>
+<script type="text/javascript">
+
+num = 0;
+//count the number of this function has been called. Print the result to a field.
+function myFunc(){
+    num++;
+    document.myForm.outputField.value = "Called " + num + "times";
+}
+
+window.setInterval("myFunc()", 1000);
+
+</script>
+<form name="myForm">
+    <input type="text" name="outputField" readonly>
+</form>
+</body>
+</html>

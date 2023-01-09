@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<body>
+<script type="text/javascript">
+
+function setColor(color){
+    document.getElementById("paragraph").style.color = color;
+}
+
+</script>
+<a href="#" style="color:red;" onmouseover="setColor('red')" onmouseout="setColor('black')">Red</a>
+<br> <br>
+<a href="#" style="color:green;" onmouseover="setColor('green')" onmouseout="setColor('black')">Green</a>
+<br><br>
+<a href="#" style="color:blue;" onmouseover="setColor('blue')" onmouseout="setColor('black')">Blue</a>
+<br><br>
+<p id="paragraph">
+    This is some sample text.
+</p>
+</body>
+</html>
